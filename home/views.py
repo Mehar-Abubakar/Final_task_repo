@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from .models import Contact
+from .models import Contact,UserProfile
 
 def home(request):
-    return render(request, 'home.html')
+    user_profile = UserProfile.objects.first()  # Assuming there's only one user profile
+    return render(request, 'home.html', {'user_profile': user_profile})
 
 def project(request):
     return render(request, 'project.html')

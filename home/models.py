@@ -8,3 +8,10 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+class UserProfile(models.Model):
+    name = models.CharField(max_length=100)
+    experience = models.TextField()
+
+    def __str__(self):
+        return self.name

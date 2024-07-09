@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Developer M.Abubakar</title>
+  <title>Developer {{ user_profile.name }}</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
@@ -56,7 +56,7 @@
 
       <div class="profile">
         <img src="{% static 'img/profileimg.jpg' %}" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">M.Abubakar</a></h1>
+        <h1 class="text-light"><a href="index.html">{{ user_profile.name }}</a></h1>
         <div class="social-links mt-3 text-center">
             <a href="https://www.facebook.com/people/Mehar-Abubakar/pfbid02oitWExZUqfiuLnPVKvyvZG6WacMV2xtXEKKdLuUjK1NhDmTBjycfHPuckmX8segYl/?mibextid=LQQJ4d" class="facebook"><i class="bx bxl-facebook"></i></a>
             <a href="https://www.instagram.com/meharbkar/" class="instagram"><i class="bx bxl-instagram"></i></a>
@@ -82,7 +82,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-      <h1>M.Abubakar</h1>
+      <h1>{{ user_profile.name }}</h1>
       <p>I'm Designer, Developer, Freelancer,<br>
          Full-Stack Developer, Python Developer.<span class="typed"
           data-typed-items=""></span></p>
@@ -102,7 +102,7 @@
         <div class="section-title">
           <h2>About Me</h2>
           <p>
-            I am M.Abubakar, a developer with experience in Python, as well as a range of other skills including full
+            I am {{ user_profile.name }}, a developer with experience in Python, as well as a range of other skills including full
             stack development, JavaScript, Bootstrap, and Figma. I have completed several individual projects and am always
             looking for new opportunities and challenges to improve my skills and advance my career. I am currently seeking
             new opportunities and am excited to tackle challenging problems and grow as a developer.
@@ -229,7 +229,7 @@
           <div class="col-lg-6">
             <h3 class="resume-title">Summary</h3>
             <div class="resume-item pb-0">
-              <h4>M.Abubakar</h4>
+              <h4>{{ user_profile.name }}</h4>
               <p><em>I am a developer with experience in Python , as well as a range of other skills including full stack development, JavaScript, Bootstrap</em></p>
               <ul>
                 <li>lahore, Punjab</li>
@@ -305,30 +305,25 @@
           </div>
           <div class="col-md-9">
             <h1>Cover Letter</h1>
-            <p>Date:08-06-24 </p>
+            <p>Date: 08-06-24</p>
             <p>To: XYZ</p>
             <p>Dear XYZ,</p>
             <p>I am writing to express my interest in the Full Stack Developer position at {{ company }}. With my strong
-              background in computer science and experience in web development, I am confident that I would be a
-              valuable asset to your team.</p>
+                background in computer science and experience in web development, I am confident that I would be a
+                valuable asset to your team.</p>
             <h2>Skills</h2>
             <ul>
-              <li>1 year of experience as a full stack developer</li>
-              <li>Expertise in  Python, UX design, and JavaScript</li>
-              <li>Strong problem-solving and communication skills</li>
+                <li>{{ user_profile.experience }}</li>
             </ul>
             <h2>Individual Projects</h2>
             <ul>
-              <li>
-                <strong>Portfolio web:</strong>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec velit nisi, ultricies eu mollis a,
-                laoreet et ipsum.
-              </li>
-              
+                <li>
+                    <strong>Portfolio web:</strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec velit nisi, ultricies eu mollis a,
+                    laoreet et ipsum.
+                </li>
             </ul>
-
-
-          </div>
+        </div>
 
 
           {% load static %}
@@ -442,7 +437,7 @@
             <div class="linkedin">
               <i class="bi bi-linkedin"></i>
               <h4>LinkedIn:</h4>
-              <a href="https://www.linkedin.com/in/MuhammadAbubakar" target="_blank">M.Abubakar</a>
+              <a href="https://www.linkedin.com/in/MuhammadAbubakar" target="_blank">{{ user_profile.name }}</a>
             </div>
           </div>
         </div>
@@ -566,10 +561,10 @@
 
   <div class="container">
     <div class="copyright">
-      &copy; Copyright <strong><span>M.Abubakar</span></strong>
+      &copy; Copyright <strong><span>{{ user_profile.name }}</span></strong>
     </div>
     <div class="credits">
-      Designed by <a href="www.linkedin.com/in/MuhammadAbubakar">M.Abubakar</a>
+      Designed by <a href="www.linkedin.com/in/MuhammadAbubakar">{{ user_profile.name }}</a>
     </div>
   </div>
   </main><!-- End #main -->
